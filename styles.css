@@ -1,0 +1,55 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 46%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+#score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: #fff;
+}
+
+button:hover,
+button:focus {
+  background: #2a2a8b;
+  color: #fff;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  border: 0.5px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+}
