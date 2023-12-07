@@ -67,6 +67,8 @@ function checkMatch() {
   let match =
     square1.getAttribute("data-color") === square2.getAttribute("data-color");
   if (!match) {
+    square1.classList.add("shake");
+    square2.classList.add("shake");
     setTimeout(function () {
       noMatch();
     }, 1000);
@@ -79,6 +81,8 @@ function checkMatch() {
 function noMatch() {
   square1.style.background = "";
   square2.style.background = "";
+  square1.classList.remove("shake");
+  square2.classList.remove("shake");
   square1 = "";
   square2 = "";
   clickCount = 0;
@@ -89,6 +93,8 @@ function isMatch() {
   score++;
   document.querySelector("#score").innerText = score;
   document.querySelector("#score").style.visibility = "visible";
+  square1.classList.add("pop");
+  square2.classList.add("pop");
   square1.style.border = "none";
   square2.style.border = "none";
   square1.removeEventListener("click", squareClicked);
