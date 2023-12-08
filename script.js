@@ -1,9 +1,9 @@
 const squaresContainer = document.querySelector("#squares");
 const numberOfSquares = 16;
 let i = 0;
-
 let square1, square2;
 let clickCount = 0;
+
 let score = 0;
 
 document.querySelector("#score").style.visibility = "hidden";
@@ -67,22 +67,18 @@ function checkMatch() {
   let match =
     square1.getAttribute("data-color") === square2.getAttribute("data-color");
   if (!match) {
-    square1.classList.add("shake");
-    square2.classList.add("shake");
     setTimeout(function () {
       noMatch();
-    }, 1000);
+    }, 500);
   } else {
     isMatch();
-    checkGameEnd();
+    checkGameEnded();
   }
 }
 
 function noMatch() {
   square1.style.background = "";
   square2.style.background = "";
-  square1.classList.remove("shake");
-  square2.classList.remove("shake");
   square1 = "";
   square2 = "";
   clickCount = 0;
@@ -93,8 +89,7 @@ function isMatch() {
   score++;
   document.querySelector("#score").innerText = score;
   document.querySelector("#score").style.visibility = "visible";
-  square1.classList.add("pop");
-  square2.classList.add("pop");
+
   square1.style.border = "none";
   square2.style.border = "none";
   square1.removeEventListener("click", squareClicked);
@@ -103,14 +98,13 @@ function isMatch() {
   console.log("is a match");
 }
 
-function checkGameEnd() {
+function checkGameEnded() {
   const target = numberOfSquares / 2;
   const gameOver = score === target ? true : false;
   if (gameOver) {
     playAgainBtn.style.visibility = "visible";
   }
 }
-
 function playAgain() {
   window.location.reload();
 }
