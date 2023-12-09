@@ -86,3 +86,11 @@ li {
     transform: scale(1);
   }
 }
+
+@media (max-width: 600px) {
+  ul {
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+    gap: 5px;
+  }
+}
