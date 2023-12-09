@@ -14,8 +14,8 @@ playAgainBtn.addEventListener("click", playAgain);
 let colors = [
   "#F45D01",
   "#F45D01",
-  "#FF4F79",
-  "#FF4F79",
+  "#AB0409",
+  "#AB0409",
   "#F2F2F2",
   "#F2F2F2",
   "#4392F1",
@@ -24,8 +24,8 @@ let colors = [
   "#EEB902",
   "#16DB65",
   "#16DB65",
-  "#0D0D0D",
-  "#0D0D0D",
+  "#F38BA4",
+  "#F38BA4",
   "#8338EC",
   "#8338EC",
 ];

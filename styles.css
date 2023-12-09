@@ -26,11 +26,12 @@ button {
   border-radius: 5px;
   letter-spacing: 1px;
   background: #fff;
+  color: #262626;
 }
 
 button:hover,
 button:focus {
-  background: #2a2a8b;
+  background: #262626;
   color: #fff;
 }
 
